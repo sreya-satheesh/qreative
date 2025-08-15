@@ -22,7 +22,7 @@ export function LandingPage() {
         </nav>
       </header>
 
-      <main className="flex-grow">
+      <main className="flex-grow flex items-center">
         <section className="container mx-auto px-4 md:px-8 py-16 md:py-24">
              <div className="grid gap-12 items-center">
                 <div className="space-y-6 text-center">

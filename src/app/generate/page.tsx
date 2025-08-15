@@ -255,9 +255,9 @@ export default function GeneratePage() {
             </Link>
         </header>
 
-        <main className="flex-grow container mx-auto px-4 md:px-8 py-16 flex flex-col md:flex-row gap-8 items-start justify-center">
+        <main className="flex-grow container mx-auto px-4 md:px-8 py-16 flex flex-col md:flex-row gap-8 items-stretch justify-center">
             <div className="w-full md:w-1/2">
-                <Card className="p-4 md:p-6 shadow-2xl rounded-2xl bg-card">
+                <Card className="p-4 md:p-6 shadow-2xl rounded-2xl bg-card h-full">
                     <CardHeader>
                         <CardTitle>QR Code Generator</CardTitle>
                         <CardDescription>Create beautiful and functional QR codes for anything.</CardDescription>
@@ -434,9 +434,9 @@ export default function GeneratePage() {
                 </Card>
             </div>
             <div className="w-full md:w-1/2">
-                 <Card className="p-4 md:p-6 shadow-2xl rounded-2xl bg-card sticky top-24">
-                    <CardContent className="p-0">
-                         <div className="p-4 bg-white rounded-lg flex items-center justify-center aspect-square transition-all duration-300">
+                 <Card className="p-4 md:p-6 shadow-2xl rounded-2xl bg-card flex flex-col justify-between h-full">
+                    <CardContent className="p-0 flex-grow flex items-center justify-center">
+                         <div className="p-4 bg-white rounded-lg w-full h-full flex items-center justify-center aspect-square transition-all duration-300">
                             {qrValue ? (
                                 <QRCodeWrapper options={qrOptions} />
                             ) : <div className="text-muted-foreground text-center flex flex-col items-center justify-center h-full w-full">
@@ -444,30 +444,30 @@ export default function GeneratePage() {
                                 Your QR code will appear here
                                 </div>}
                         </div>
-                        <div className="mt-6 space-y-4">
-                             <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <Label>Format</Label>
-                                    <Select value={exportFormat} onValueChange={(v) => setExportFormat(v as ExportFormat)}>
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Format" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectItem value="png">PNG</SelectItem>
-                                        <SelectItem value="svg">SVG</SelectItem>
-                                    </SelectContent>
-                                    </Select>
-                                </div>
-                                <div>
-                                    <Label>Resolution (px)</Label>
-                                    <Input type="number" value={exportSize} onChange={e => setExportSize(Number(e.target.value))} />
-                                </div>
-                            </div>
-                            <Button onClick={handleDownload} className="w-full" disabled={!qrValue}>
-                                <Download className="mr-2" /> Download
-                            </Button>
-                        </div>
                     </CardContent>
+                    <div className="mt-6 space-y-4">
+                         <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <Label>Format</Label>
+                                <Select value={exportFormat} onValueChange={(v) => setExportFormat(v as ExportFormat)}>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Format" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="png">PNG</SelectItem>
+                                    <SelectItem value="svg">SVG</SelectItem>
+                                </SelectContent>
+                                </Select>
+                            </div>
+                            <div>
+                                <Label>Resolution (px)</Label>
+                                <Input type="number" value={exportSize} onChange={e => setExportSize(Number(e.target.value))} />
+                            </div>
+                        </div>
+                        <Button onClick={handleDownload} className="w-full" disabled={!qrValue}>
+                            <Download className="mr-2" /> Download
+                        </Button>
+                    </div>
                 </Card>
             </div>
         </main>
@@ -480,5 +480,3 @@ export default function GeneratePage() {
       </div>
     )
 }
-
-    
