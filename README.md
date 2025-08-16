@@ -36,19 +36,6 @@ Built with **Next.js** and **React**, it offers a wide range of customization op
   Export your QR code in:
   - **PNG** or **SVG**
   - Selectable resolution for high-quality downloads
-
-- **Error Correction**  
-  Adjust the **error correction level** to balance design complexity with scannability.
-
-- **Real-time Preview**  
-  Instantly see your customizations reflected in the **live preview**.
-
-- **Input Validation**  
-  Ensures data integrity and creates **valid, scannable** QR codes.
-
-- **Rate Limiting**  
-  Prevents abuse and ensures a **stable experience** for all users.
-
   
 ---
 
