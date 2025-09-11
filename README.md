@@ -3,7 +3,7 @@
 **Qreative** is a powerful and intuitive web application for generating **custom QR codes**.  
 Built with **Next.js** and **React**, it offers a wide range of customization options to make your QR codes stand out.
 
-<img width="1918" height="900" alt="Screenshot 2025-08-15 094153" src="https://github.com/user-attachments/assets/86073b73-8488-40a5-824f-e9b2df08ba06" />
+<img width="1893" height="901" alt="Screenshot 2025-09-11 105554" src="https://github.com/user-attachments/assets/548c7421-6b37-4121-8f48-656421e50fad" />
 
 ---
 
