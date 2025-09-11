@@ -41,7 +41,7 @@ Built with **Next.js** and **React**, it offers a wide range of customization op
 
 ## Live Demo
 
-https://qreative-private.vercel.app/
+https://qreative-nine.vercel.app/
 
 ---
 
